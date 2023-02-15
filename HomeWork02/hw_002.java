@@ -15,7 +15,7 @@ public class hw_002 {
         Map<String, Integer> params = readParametersFromFile("HomeWork02/input.txt");
         int a = params.get("a");
         int b = params.get("b");
-        if (b == 0 & a == 0) {
+        if (b == 0 && a == 0) {
             writeFile("не определено");
         } else {
             writeFile(pow(a, b));
