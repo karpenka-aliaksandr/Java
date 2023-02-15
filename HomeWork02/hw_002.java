@@ -6,6 +6,7 @@ import java.io.FileReader;
 import java.io.PrintWriter;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
+import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -17,7 +18,7 @@ public class hw_002 {
         if (b == 0 & a == 0) {
             writeFile("не определено");
         } else {
-            writeFile(Pow(a, b));
+            writeFile(pow(a, b));
         }
     }
 
@@ -36,21 +37,21 @@ public class hw_002 {
 
     private static void writeFile(String string) throws Exception {
         File file = new File("HomeWork02/output.txt");
-        PrintWriter pw = new PrintWriter(file);
+        PrintWriter pw = new PrintWriter(file, StandardCharsets.UTF_8);
         pw.println(string);
         pw.close();
     }
 
-    private static String Pow(int a, int b) {
+    private static String pow(int a, int b) {
         BigDecimal pow = BigDecimal.valueOf(1);
         for (int i = 0; i < b; i++) {
             pow = pow.multiply(BigDecimal.valueOf(a));
         }
-        
+
         for (int i = 0; i < (-b); i++) {
-            pow = pow.divide(BigDecimal.valueOf(a),100000, RoundingMode.HALF_UP );
-            //System.out.println(pow.stripTrailingZeros().toPlainString());
-        }  
+            pow = pow.divide(BigDecimal.valueOf(a), 100000, RoundingMode.HALF_UP);
+            // System.out.println(pow.stripTrailingZeros().toPlainString());
+        }
         return pow.stripTrailingZeros().toPlainString();
     }
 
