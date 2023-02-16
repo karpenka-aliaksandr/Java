@@ -24,4 +24,12 @@ hs_err_pid*
 
 
 #лекции
-/Lection*
+/Lection**
+#txt домашек
+Карпенко*.*
+
+#Семинары
+
+/Seminare**
+
+/.vscode
