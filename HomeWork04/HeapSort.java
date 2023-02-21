@@ -7,7 +7,6 @@ public class HeapSort
 {
     public static void main(String args[]){
         int arr[] = {12, 11, 13, 5, 6, 7, 7, 12, 3, 23, 234,432,43,23,1,3,5,1,2,5,1,2,2,3,4};
-        int n = arr.length;
         System.out.println("Unsorted array is: ");
         printArray(arr);
         sortArray(arr);
