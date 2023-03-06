@@ -26,8 +26,9 @@
     - возврат через waveMapRoadPrint (waveMap,path)
 
 ## Класс Path  
-хранит Deque <Point>  
-    - возврат через toString
+хранит Deque < Point >  
+
+    - возврат через toString  
     - добавление в начало (Point)
 
 ## Класс Point  
